@@ -1,6 +1,6 @@
 :root {
     --violet-doux: #6c63ff;
-    --violet-fonce : #534EDD; 
+    --violet-fonce : #3a35d4; 
     --orange-vif: #FFA726;
     --gris-tres-fonce: #333 ;
     --gris-fonce: #666;
@@ -229,3 +229,395 @@ footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: #f5f6fa;
+    color: #333;
+  }
+  
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #6c63ff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  nav a.active {
+    color: #6c63ff;
+  }
+  
+  nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #6c63ff;
+  }
+  
+  /* TITRE */
+  main h1 {
+    text-align: center;
+    margin: 60px 0 20px;
+    font-size: 32px;
+    color: #6c63ff;
+  }
+  
+  /* SECTION */
+  .projets {
+    padding: 40px 60px;
+  }
+  
+  .projets h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #6c63ff;
+    position: relative;
+  }
+  
+  .projets h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #6c63ff;
+    margin: 10px auto 0;
+    border-radius: 5px;
+  }
+  
+  /* GRID CARTES */
+  .cartes {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  /* CARTE */
+  .partie {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+  
+  .partie:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* IMAGE */
+  .partie img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #6c63ff;
+  }
+  
+  /* TEXTE */
+  .texte-liens {
+    padding: 20px;
+  }
+  
+  .texte-liens h3 {
+    color: var(--violet-fonce);
+    margin-bottom: 10px;
+  }
+  
+  .texte-liens p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* LANGAGES */
+  .langages,
+  .langage {
+    padding: 0 20px 15px;
+  }
+  
+  .langages span,
+  .langage span {
+    display: inline-block;
+    background: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 5px;
+    color: #6c63ff;
+    font-weight: 500;
+  }
+  
+  /* LIGNE */
+  .partie hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 20px;
+  }
+  
+  /* LIENS */
+  .liens {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 20px;
+  }
+  
+  .liens a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .liens a:hover {
+    color: #6c63ff;
+  }
+  
+  /* FOOTER */
+  footer {
+    background: #6c63ff;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+  }
+  
+  footer div:first-child {
+    margin-bottom: 15px;
+  }
+  
+  footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .cartes {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .cartes {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+
+
+
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #eee9ff;
+}
+
+/* CONTAINER */
+.contact {
+    display: flex;
+    width: 900px;
+    max-width: 95%;
+    margin: 80px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(108, 92, 231, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+/* COLONNE GAUCHE (VIOLET) */
+.contact-info {
+    width: 35%;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* TITRE À GAUCHE */
+.contact h2 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: white;
+    z-index: 2;
+    font-size: 1.5rem;
+}
+
+/* TEXTE À DROITE */
+.contact > p {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 50%;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* FORMULAIRE DROITE */
+.contact-form {
+    width: 65%;
+    padding: 80px 40px 40px 40px;
+}
+
+/* INPUTS */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: none;
+    background: #f1efff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    background: white;
+    box-shadow: 0 0 8px rgba(108, 92, 231, 0.3);
+}
+
+/* BOUTON */
+button {
+    margin-top: 10px;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact h2,
+    .contact > p {
+        position: static;
+        text-align: center;
+        margin: 15px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
